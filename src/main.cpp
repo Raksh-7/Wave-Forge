@@ -1,15 +1,15 @@
+#include "app/WaveForgeMainWindow.h"
+
 #include <QApplication>
-#include <QWidget>
 
 int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
+    QApplication::setApplicationName("WaveForge");
+    QApplication::setOrganizationName("WaveForge");
 
-    QWidget window;
-    window.resize(700, 500);
-    window.setWindowTitle("Waveline");
-
-    window.show();
+    WaveForgeMainWindow clMainWindow;
+    clMainWindow.show();
 
     return app.exec();
 }
